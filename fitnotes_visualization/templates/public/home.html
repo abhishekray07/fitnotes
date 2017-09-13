@@ -1,0 +1,19 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <!--<h1>Welcome to FitNotes Visualization</h1>-->
+
+  <p>Visualize your workout data.</p>
+  <p><a href="https://github.com/sloria/cookiecutter-flask" class="btn btn-primary btn-large">Upload spreadsheet &raquo;</a></p>
+</div><!-- /.jumbotron -->
+
+<div class="body-content">
+  <!--<div id="container" style="width:100%; height:400px;"></div>-->
+  <canvas id="myChart" width="400" height="100"></canvas>
+
+</div>
+{% endblock %}
+
