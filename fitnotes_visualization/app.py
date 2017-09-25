@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
+from flask_uploads import configure_uploads
 
 from fitnotes_visualization import commands, public
-from fitnotes_visualization.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, migrate, webpack
+from fitnotes_visualization.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, migrate, webpack, uploads
 from fitnotes_visualization.settings import ProdConfig
-
 
 def create_app(config_object=ProdConfig):
     """An application factory, as explained here: http://flask.pocoo.org/docs/patterns/appfactories/.
@@ -30,6 +30,7 @@ def register_extensions(app):
     debug_toolbar.init_app(app)
     migrate.init_app(app, db)
     webpack.init_app(app)
+    configure_uploads(app, uploads)
     return None
 
 

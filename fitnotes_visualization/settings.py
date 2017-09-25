@@ -12,10 +12,11 @@ class Config(object):
     BCRYPT_LOG_ROUNDS = 13
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
     DEBUG_TB_INTERCEPT_REDIRECTS = False
-    CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
+    CACHE_TYPE = 'memcached'  # Can be "memcached", "redis", etc.
+    CACHE_MEMCACHED_SERVERS = ['127.0.0.1:11211']
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     WEBPACK_MANIFEST_PATH = 'webpack/manifest.json'
-
+    UPLOADS_DEFAULT_DEST = os.path.join(APP_DIR, 'static/uploads/')
 
 class ProdConfig(Config):
     """Production configuration."""
@@ -36,7 +37,9 @@ class DevConfig(Config):
     DB_PATH = os.path.join(Config.PROJECT_ROOT, DB_NAME)
     SQLALCHEMY_DATABASE_URI = 'sqlite:///{0}'.format(DB_PATH)
     DEBUG_TB_ENABLED = True
-    CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.
+    CACHE_TYPE = 'memcached'  # Can be "memcached", "redis", etc.
+    CACHE_MEMCACHED_SERVERS = ['127.0.0.1:11211']
+    # UPLOADS_DEFAULT_URL = 'http://localhost:5000/static/uploads/data'
 
 
 class TestConfig(Config):

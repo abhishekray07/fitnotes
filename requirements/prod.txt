@@ -35,3 +35,10 @@ Flask-Caching>=1.0.0
 
 # Debug toolbar
 Flask-DebugToolbar==0.10.1
+
+# Uploads
+Flask-Uploads==0.2.1
+
+# cache
+python3-memcached==1.51
+pylibmc==1.5.2

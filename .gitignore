@@ -51,3 +51,12 @@ env/
 # webpack-built files
 /fitnotes_visualization/static/build/
 /fitnotes_visualization/webpack/manifest.json
+
+.DS_Store
+.idea/
+.idea/preferred-vcs.xml
+.idea/vcs.xml
+assets/.DS_Store
+fitnotes_visualization/.DS_Store
+fitnotes_visualization/static/.DS_Store
+fitnotes_visualization/static/uploads/
