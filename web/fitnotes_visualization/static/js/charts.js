@@ -40,7 +40,12 @@ function drawBarChart(data, domId, title) {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        autoSkip: false
                     }
                 }]
             }
@@ -62,7 +67,7 @@ function drawPieChart(data, domId, title) {
             }]
         },
         options: {
-            legend: { display: false },
+            legend: { display: true },
             title: {
                 display: true,
                 text: title,
@@ -88,13 +93,6 @@ function drawLineChart(data, domId, title) {
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            },
             legend: { display: false },
             title: {
                 display: true,
@@ -112,7 +110,7 @@ $.getJSON("/exercises/favorite", function( data ) {
 
 // Get exercise group splits
 $.getJSON("/exercises/group", function( data ) {
-    drawPieChart(data, "groupChart", "Exercise Group");
+    drawPieChart(data, "groupChart", "Number of workouts per body group");
 })
 
 

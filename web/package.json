@@ -1,7 +1,7 @@
 {
   "name": "fitnotes_visualization",
   "version": "1.0.0",
-  "description": "Visualize FitNotes data",
+  "description": "Fitnotes.info | Visualize FitNotes data",
   "scripts": {
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --progress --colors -p",
     "start": "./node_modules/.bin/concurrently -n \"WEBPACK,FLASK\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run webpack-dev-server\" \"npm run flask-server\"",

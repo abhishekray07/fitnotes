@@ -2,7 +2,7 @@
 FitNotes Visualization
 ===============================
 
-Visualize FitNotes data
+Fitnotes.info | Visualize FitNotes data
 
 
 Quickstart

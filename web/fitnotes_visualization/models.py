@@ -131,7 +131,7 @@ def get_group_splits(filename):
 
     exercise_group_counts = collections.defaultdict(int)
     for _, exercise in exercise_data.items():
-        exercise_group_counts[exercise.group] += 1
+        exercise_group_counts[exercise.group] += exercise.get_num_workouts()
 
     return exercise_group_counts
 
