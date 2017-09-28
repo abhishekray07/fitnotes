@@ -46,7 +46,7 @@ docs/_build
 env/
 
 # npm
-/node_modules/
+/web/node_modules/
 
 # webpack-built files
 /fitnotes_visualization/static/build/

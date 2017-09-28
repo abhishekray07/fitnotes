@@ -1,0 +1,27 @@
+version: "2"
+services:
+  memcached:
+    restart: always
+    image: memcached
+    ports:
+      - "11211:11211"
+
+  web:
+    restart: always
+    build: ./web
+    image: fitnotes
+    ports:
+      - "5000"
+    depends_on:
+      - memcached
+
+  nginx:
+    restart: always
+    build: ./nginx
+    image: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+
+

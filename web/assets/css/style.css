@@ -1,0 +1,178 @@
+/* =============================================================================
+   App specific CSS file.
+   ========================================================================== */
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.container-narrow{
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Forms */
+
+.navbar-form input[type="text"],
+.navbar-form input[type="password"] {
+  width: 180px;
+}
+
+
+.form-register {
+  width: 50%;
+}
+
+.form-register .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999999;
+}
+
+footer a {
+  color: #999999;
+}
+
+footer p {
+  float: right;
+  margin-right: 25px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+footer .company {
+  float: left;
+  margin-left: 25px;
+}
+
+footer .footer-nav {
+  float: right;
+  margin-right: 25px;
+  list-style: none;
+}
+
+path {
+    fill: none;
+    stroke: #aaa;
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.body-content {
+    margin-top: 50px;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    border-color: #ddd;
+}
+
+.panel>.detail {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4 px;
+    box-shadow: 1 px 1 px rgba(0,0,0,0.5);
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1 px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel .center {
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.file-warning {
+    color: red;
+    font-size: 13px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.glyphicon {
+    padding-left: 15px;
+}
+
+[tooltip]:before {
+    /* needed - do not touch */
+    content: attr(tooltip);
+    position: absolute;
+    opacity: 0;
+
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #fff;
+}
+
+[tooltip]:hover:before {
+    /* needed - do not touch */
+    opacity: 0.8;
+
+    /* customizable */
+    background: black;
+    margin-top: -80px;
+}
+
+[tooltip]:not([tooltip-persistent]):before {
+    pointer-events: none;
+}
+
+#exercise {
+    margin-top: 20px;
+}

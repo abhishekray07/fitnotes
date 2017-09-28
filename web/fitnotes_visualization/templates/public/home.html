@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="body-content">
+  <div class="jumbotron">
+    <h4>Visualize your Fitnotes Workout Data!</h4>
+    <hr/>
+    <form id="uploadForm" method="POST" action="/" enctype="multipart/form-data">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      <div class="row">
+        <div class="form-group col-md-12">
+            <div class="form-group">
+              <input id="workout_file" placeholder="Choose File" disabled="disabled" size="50"/>
+              <label for="workout_data" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> <strong>Select file</strong>
+              </label>
+              <span class="file-warning"><i>Files should in the csv format</i></span>
+              {{ form.workout_data(class_="form-control file-upload") }}
+            </div>
+        </div>
+      </div>
+      <div class="row">
+
+      </div>
+      <button type="submit" class="btn btn-success">Upload Workout Data</button>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Getting Fitnotes workout data</h4>
+        </div>
+        <div class="detail">
+          <ol>
+            <li>Open the <strong>Settings</strong> screen on the Fitnotes application on your phone.</li>
+            <li>Under the Data section on the Settings screen, select <strong>Spreadsheet Export</strong>.</li>
+            <li>On the next screen, select where you want to Export the data to. You could store in on your phone and
+              upload it directly or upload it to Google Drive to use it on your desktop.</li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
