@@ -9,7 +9,7 @@ services:
   web:
     restart: always
     build: ./web
-    image: fitnotes
+    image: abhishekray07/fitnotes-web
     ports:
       - "5000"
     depends_on:
@@ -18,7 +18,7 @@ services:
   nginx:
     restart: always
     build: ./nginx
-    image: nginx
+    image: abhishekray07/fitnotes-nginx
     ports:
       - "80:80"
     depends_on:
