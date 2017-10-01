@@ -12,5 +12,6 @@ ENV FLASK_APP /app/autoapp.py
 ENV FLASK_DEBUG 0
 
 RUN pip install -r requirements.txt
+RUN npm install
 RUN npm run build
 CMD flask run --host=0.0.0.0
